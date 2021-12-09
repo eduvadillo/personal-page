@@ -1,0 +1,22 @@
+form.auth__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+button.button__submit {
+  max-width: 150px;
+  margin: 1em auto;
+  background-color: transparent;
+  color: yellow;
+  border: 3px solid yellow;
+}
+
+.signUpDiv {
+  color: yellow;
+  text-align: center;
+  margin-top: 25vh;
+}
