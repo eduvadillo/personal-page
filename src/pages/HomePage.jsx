@@ -30,7 +30,7 @@ function HomePage() {
   useEffect(() => {
     setTimeout(() => {
       authService.get("/version").then((response) => {
-        console.log(`********4343`, response.data.version);
+        //console.log(`********4343`, response.data.version);
         SetVersion(response.data.version);
         setLoading(false);
       });
