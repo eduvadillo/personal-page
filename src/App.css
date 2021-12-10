@@ -690,4 +690,18 @@
     font-size: 1.2em;
     transform-origin: 0 100px;
   }
+
+  .div-icons-next-back2 {
+    display: flex;
+    align-items: center;
+    z-index: 200;
+    margin-top: -6rem;
+    justify-content: center;
+  }
+
+  .div-icons-next-back {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+  }
 }
