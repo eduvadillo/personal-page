@@ -16,7 +16,7 @@ function HomePage() {
   const [activeIcon, setActiveIcon] = useState(`icon2`);
 
   const authService = axios.create({
-    baseURL: `${process.env.REACT_APP_SERVER_URL}/`,
+    baseURL: `${process.env.REACT_APP_SERVER_URL}`,
   });
 
   useEffect(() => {
