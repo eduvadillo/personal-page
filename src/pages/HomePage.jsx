@@ -8,6 +8,8 @@ import { AiOutlineDown } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { GrTwitter } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa";
+import { AiFillBackward } from "react-icons/ai";
+import { AiFillForward } from "react-icons/ai";
 
 function HomePage() {
   const [version, SetVersion] = useState("00");
@@ -33,6 +35,22 @@ function HomePage() {
     activeCard === `card`
       ? (setActiveCard(`card active`), setActiveIcon(`icon2 active`))
       : (setActiveCard(`card`), setActiveIcon(`icon2`));
+
+  const handleReload = (e) => {
+    window.location.reload();
+  };
+
+  const handleReloadBack = (e) => {
+    /*    const versionLess = {
+      versionLess: version - 1,
+    }; */
+    authService.get("/version-back").then((response) => {
+      //console.log(`********4343`, response.data.version);
+      /*   SetVersion(response.data.version); */
+      window.location.reload();
+      setLoading(false);
+    });
+  };
 
   const texto = `Edu Vadillo - Creative Web Developer - `;
 
@@ -74,6 +92,11 @@ function HomePage() {
               </a>
             </li>
           </ul>
+          <div className='div-icons-next-back'>
+            <AiFillBackward className='icon-back' onClick={handleReloadBack} />
+            1/3
+            <AiFillForward className='icon-next' onClick={handleReload} />
+          </div>
         </div>
       </>
     );
@@ -116,6 +139,11 @@ function HomePage() {
             </div>
           </div>
         </div>
+        <div className='div-icons-next-back2'>
+          <AiFillBackward className='icon-back' onClick={handleReloadBack} />
+          2/3
+          <AiFillForward className='icon-next' onClick={handleReload} />
+        </div>
       </>
     );
   }
@@ -153,6 +181,11 @@ function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='div-icons-next-back2'>
+          <AiFillBackward className='icon-back' onClick={handleReloadBack} />
+          3/3
+          <AiFillForward className='icon-next' onClick={handleReload} />
         </div>
       </>
     );
