@@ -1,27 +1,19 @@
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "../App.css";
 import edu2 from "../edu2.png";
 import edu3 from "../edu.png";
 import LoadingComponent from "../components/Loading/index";
-import { FaRegUser } from "react-icons/fa";
-import { BsChatLeft } from "react-icons/bs";
-import { FiSettings } from "react-icons/fi";
-import { BiHelpCircle } from "react-icons/bi";
-import { SiAboutdotme } from "react-icons/si";
 import { AiOutlineDown } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { GrTwitter } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function HomePage() {
-  const [timerDays, setToggleCard] = useState("00");
   const [version, SetVersion] = useState("00");
   const [loading, setLoading] = useState(true);
   const [activeCard, setActiveCard] = useState(`card`);
   const [activeIcon, setActiveIcon] = useState(`icon2`);
-
-  const card = "card";
 
   const authService = axios.create({
     baseURL: `${process.env.REACT_APP_SERVER_URL}/`,
